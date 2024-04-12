@@ -10,23 +10,35 @@ const coolGreeting = (greet) => {
   //this took way too long to figure out 
 };
 
-const haveBirthday = () => {
-  const person = {
-    age: 24,
+const haveBirthday = (person) => {
+  // let = people = {
+  //     age: 24,
+  // }
+  person['age'] = person['age'] + 1 || 1
+  console.log(person['age'])
+};
+
+const becomeSecretAgent = (person, spyHandle) => {
+  delete person['name'];
+  person['spyHandle'] = spyHandle;
+  console.log(person)
+};
+
+const carMaker = (name, maker, year) => {
+  const needsOilChange = false
+  return { name, maker, year, needsOilChange };
+};
+
+const weAreNotFriends = (person) => {
+  //delete person.friends.pop()
+  //if (typeof person['friend'] === "undefined")
+  return person.friends.pop()
+};
+
+const listHobbies = (person) => {
+  for (let i = 0; i < person['hobbies'].length; i++) {
+    console.log(`${person.name} likes ${person['hobbies'][i]}.`)
   }
-  person.age++
-}
-
-const becomeSecretAgent = () => {
-};
-
-const carMaker = () => {
-};
-
-const weAreNotFriends = () => {
-};
-
-const listHobbies = () => {
 };
 
 const getNextOpponent = () => {
