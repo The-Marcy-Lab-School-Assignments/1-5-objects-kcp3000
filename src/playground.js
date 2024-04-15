@@ -162,6 +162,92 @@ const listAllKeys = (object) => {
 
 //(listAllKeys(car))
 
-const convertToMatrix = () => {
+const users = [
+    {
+        name: 'Sara',
+        age: 30,
+        bio: 'What a legend',
+    },
+    {
+        name: 'Bob',
+        age: 30,
+        bio: "Kind of mean if we're being honest",
+    },
+];
+
+const cats = [
+    {
+        name: 'Fluffy',
+        breed: 'Persian',
+        isAJerk: true,
+        isPerfect: true,
+    },
+    {
+        name: 'Mittens',
+        breed: 'Tabby',
+        isAJerk: true,
+        isPerfect: true,
+    },
+    {
+        name: 'Socks',
+        breed: 'Calico',
+        isAJerk: false,
+        isPerfect: true,
+    },
+]
+
+const convertToMatrix = (object) => {
+    //console.log(Object.entries(object))
+    //console.log(Object.values(object))
+    // console.log(Object.keys(object[0]))
+    // console.log(Object.values(object[0]))
+    // console.log(Object.values(object[1]))
+    //console.log(object[0]['name'])
+    // for (const key in object) {
+    //     console.log(key[0])
+    // }
+    let matrix = [];
+    if (!object?.length) return matrix
+    let key = Object.keys(object[0])
+    matrix.push(key)
+    for (let i = 0; i < object.length; i++) {
+        let values = Object.values(object[i])
+        //let keys = Object.keys(object[i])
+        matrix.push(values)
+    };
+    // for (let j = 0; j < object.length; j++) {
+    //     let key = Object.keys(object[j])
+    //     //matrix.push(key)
+    //     console.log(key[0])
+    //     // if (key === 0) {
+    //     //     console.log(key)
+    //     // }
+    // }
+    // let val1 = Object.values(object[0])
+    // let val2 = Object.values(object[1])
+    // matrix.push(keys, val1, val2)
+    return matrix
 
 };
+
+// console.log(convertToMatrix(cats))
+//console.log(convertToMatrix(users))
+
+
+const user = {
+    name: 'Zo',
+    age: 28,
+};
+
+const lapTimes = ['3:07', '3:43', '3:15'];
+
+// const name = user.name;
+// const age = user.age;
+
+// const firstLap = lapTimes[0];
+// const secondLap = lapTimes[1];
+// const thirdLap = lapTimes[2];
+
+const { name, age } = user
+const [a, b, c] = lapTimes
+console.log(age)

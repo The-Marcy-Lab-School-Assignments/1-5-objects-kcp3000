@@ -43,7 +43,7 @@ const listHobbies = (person) => {
 
 const getNextOpponent = (team) => {
   //let newArr = []
-  if (typeof team.matches !== 'object') return null
+  if (team.matches[0] === undefined) return null
   for (let i = 0; i < team.matches.length; i++) {
     return team.matches[i].teamName;
   }
@@ -58,8 +58,22 @@ const listAllValues = (object) => {
   return Object.values(object)
 };
 
-const convertToMatrix = () => {
+const convertToMatrix = (object) => {
+  let matrix = [];
+  if (!object?.length) return matrix
+
+  let key = Object.keys(object[0])
+
+  matrix.push(key)
+
+  for (let i = 0; i < object.length; i++) {
+    let values = Object.values(object[i])
+    matrix.push(values)
+  };
+  return matrix
+
 };
+
 
 module.exports = {
   coolGreeting,
