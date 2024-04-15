@@ -105,6 +105,63 @@ const listHobbies = (person) => {
 
 //listHobbies(person2)
 
-const getNextOpponent = () => {
-    if ()
+const fighters = {
+    name: 'Fighters',
+    sport: 'basketball',
+    wins: 3,
+    location: {
+        city: 'Bridgeport',
+        state: 'CT',
+    },
+    matches: [
+        {
+            teamName: 'Dunkaroos',
+            skill: 9,
+            wins: 12,
+        },
+        {
+            teamName: 'Space Jammers',
+            skill: 10,
+            wins: 16,
+        },
+        {
+            teamName: 'Mustangs',
+            skill: 6,
+            wins: 10,
+        },
+    ],
+};
+
+// const getNextOpponent = (team) => {
+//     //let newArr = []
+//     for (let i = 0; i < team.matches.length; i++) {
+//         if (typeof team === 'undefined') return null
+//         return team.matches[i].teamName;
+//     }
+// };
+
+// console.log(getNextOpponent(fighters))
+//console.log(getNextOpponent(fighters))
+
+
+const person = {
+    name: 'Sara',
+    age: 30,
+    bio: 'What a legend',
+};
+
+const car = {
+    name: 'Civic',
+    maker: 'Honda',
+    year: 2010,
+};
+
+const listAllKeys = (object) => {
+    console.log(Object.values(object))
+}
+
+//(listAllKeys(car))
+
+const convertToMatrix = () => {
+
 };

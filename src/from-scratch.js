@@ -41,13 +41,21 @@ const listHobbies = (person) => {
   }
 };
 
-const getNextOpponent = () => {
+const getNextOpponent = (team) => {
+  //let newArr = []
+  if (typeof team.matches !== 'object') return null
+  for (let i = 0; i < team.matches.length; i++) {
+    return team.matches[i].teamName;
+  }
 };
 
-const listAllKeys = () => {
-};
+const listAllKeys = (object) => {
+  return Object.keys(object)
+}
 
-const listAllValues = () => {
+
+const listAllValues = (object) => {
+  return Object.values(object)
 };
 
 const convertToMatrix = () => {
