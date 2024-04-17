@@ -1,3 +1,4 @@
+/** FEEDBACK: Great job! You have all test cases passing! */
 const coolGreeting = (greet) => {
   // person = {
   //   name: 'Sara',
